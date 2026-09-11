@@ -1,0 +1,72 @@
+.contact-panel {
+  padding: 3.5rem;
+  text-align: center;
+  background: var(--color-text);
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-panel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(480px circle at 50% 0%, rgba(47, 93, 255, 0.35), transparent 70%);
+}
+
+.contact-heading {
+  position: relative;
+  color: #fff;
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.contact-text {
+  position: relative;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 1.05rem;
+  max-width: 46ch;
+  margin: 0 auto 2.25rem;
+}
+
+.contact-actions {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.9rem;
+}
+
+.contact-panel .btn-primary {
+  background: #fff;
+  color: var(--color-text);
+}
+
+.contact-panel .btn-primary:hover {
+  background: var(--color-accent-soft);
+  color: var(--color-accent-dark);
+}
+
+.contact-panel .btn-secondary {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.contact-panel .btn-secondary:hover {
+  border-color: #fff;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .contact-panel {
+    padding: 2.5rem 1.5rem;
+  }
+  .contact-actions {
+    flex-direction: column;
+  }
+  .contact-actions .btn {
+    width: 100%;
+  }
+}
